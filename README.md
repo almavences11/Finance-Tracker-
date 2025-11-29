@@ -10,9 +10,9 @@
 
 🛠️ Technologies Used:
 
-- 🐼 Pandas
+     🐼 Pandas
 
-- 📊 Plotly 
+     📊 plotly 
 
-- 🎨 Streamlit
+     🎨 Streamlit
 
