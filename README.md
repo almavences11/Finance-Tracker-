@@ -1,2 +1,2 @@
 # Alma's Finance Tracker
-Finance tracker with charts 
+:money_sign: Finance tracker with charts 
