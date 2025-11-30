@@ -26,7 +26,7 @@ def load_transactions(file):
 
 def main(): 
 
-    st.title("Simple Finance Dashboard 💰")
+    st.title("Finance Dashboard 💰")
     st.markdown("Track your income and expenses effortlessly!")
      
 
