@@ -29,7 +29,7 @@ def main():
     st.markdown("Track your income and expenses effortlessly!")
     st.markdown("Developed by Alma Vences - [GitHub](https://github.com/almavences11)") 
 
-    uploaded_file = st.file_uploader("Upload your finance data (CSV or pdf) file", type=["csv", "pdf"])
+    uploaded_file = st.file_uploader("Upload your finance data (CSV) file", type=["csv"])
 
     if uploaded_file is not None:
         df = load_transactions(uploaded_file)
