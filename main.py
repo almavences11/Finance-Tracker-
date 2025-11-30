@@ -13,7 +13,10 @@ st.set_page_config(page_title="Finance Tracker App", page_icon="💰", layout="w
 def load_transactions(file):
     try: 
         df = pd.read_csv(file)
-        df.column =[]
+        
+        
+
+
         st.write(df)
 
         return df 
