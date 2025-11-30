@@ -13,6 +13,7 @@ st.set_page_config(page_title="Finance Tracker App", page_icon="💰", layout="w
 def load_transactions(file):
     try: 
         df = pd.read_csv(file)
+        df.column =[]
         st.write(df)
 
         return df 
@@ -27,7 +28,7 @@ def main():
 
     st.title("Simple Finance Dashboard 💰")
     st.markdown("Track your income and expenses effortlessly!")
-    st.markdown("Developed by Alma Vences - [GitHub](https://github.com/almavences11)") 
+     
 
     uploaded_file = st.file_uploader("Upload your finance data (CSV) file", type=["csv"])
 
