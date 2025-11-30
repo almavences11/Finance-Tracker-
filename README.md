@@ -1,4 +1,4 @@
-# 💰 Alma's Finance Tracker
+# 💰 Finance Tracker
 📊 Finance tracker with charts
 
 ✨ This project focuses on tracking income and expenses, group expenses by categories, and generate charts. 
