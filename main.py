@@ -21,7 +21,7 @@ def load_transactions(file):
 
         return df 
     except Exception as e:
-        st.error(f"Error loading file: {string(e)}")
+        st.error(f"Error loading file: {str(e)}")
         return None 
 
 
