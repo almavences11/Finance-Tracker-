@@ -17,7 +17,8 @@ def load_transactions(file):
         df["Amount"] = df["Amount"].str.replace(",", "").astype(float)
         df["Date"] = pd.to_datetime(df["Date"], format="%d %b %Y") 
 
-        st.write(df)        
+
+        st.write(df)         
         return df 
     except Exception as e:
         st.error(f"Error loading file: {str(e)}")
@@ -34,8 +35,7 @@ def main():
 
     if uploaded_file is not None:
         df = load_transactions(uploaded_file)
-
-        
+        df.to_csv(r'Finance-Tracker-/outputs/transactions.csv', index=False)        
 main() 
 
 
