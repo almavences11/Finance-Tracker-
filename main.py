@@ -17,10 +17,7 @@ def load_transactions(file):
         df["Amount"] = df["Amount"].str.replace(",", "").astype(float)
         df["Date"] = pd.to_datetime(df["Date"], format="%d %b %Y") 
 
-        
-
-
-        
+        st.write(df))        
         return df 
     except Exception as e:
         st.error(f"Error loading file: {str(e)}")
