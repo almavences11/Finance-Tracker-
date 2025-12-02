@@ -1,9 +1,8 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-import json 
-import os 
+import plotly.express as px 
 
+# Set Streamlit page configuration
 st.set_page_config(page_title="Finance Tracker App", page_icon="💰", layout="wide") 
  
 
@@ -73,22 +72,21 @@ def main():
     if uploaded_file is not None:
         df = load_transactions(uploaded_file)
 
-    # only continue if the file was loaded successfully 
-    if df is not None:
+        # only continue if the file was loaded successfully 
+        if df is not None:
 
-        #Group Expenses by category 
-        grouped = df.groupby("Category_Group")["Amount"].sum().reset_index()
+            #Group Expenses by category 
+            grouped = df.groupby("Category_Group")["Amount"].sum().reset_index()
 
-        st.subheader("Total Expenses by Category")
-        st.dataframe(grouped) # show the grouped totals 
 
-# Plot a pie chart of expenses by category 
+            st.subheader("Total Expenses by Category")
+            st.dataframe(grouped) # show the grouped totals 
 
-        fig = px.pie(grouped, names="Category_Group", values="Amount", title="Expenses by Category")
-        st.plotly_chart(fig)
-        
+            # Plot a pie chart of expenses by category 
 
-        
+            fig = px.pie(grouped, names="Category_Group", values="Amount", title="Expenses by Category")
+            st.plotly_chart(fig)
+               
 # run the app
 main() 
 
