@@ -67,7 +67,7 @@ def main():
 
     # only process if a file is uploaded
     if uploaded_file is not None:
-        df = load_transactions(uploaded_file)
+        df = load_transactions(uploaded_file) # calls the function to load and process transactions from the CSV 
 
         # only continue if the file was loaded successfully 
         if df is not None:
@@ -80,7 +80,6 @@ def main():
             st.dataframe(grouped) # show the grouped totals 
 
             # Plot a pie chart of expenses by category 
-
             fig = px.pie(grouped, names="Category_Group", values="Amount", title="Expenses by Category")
             st.plotly_chart(fig)
                
