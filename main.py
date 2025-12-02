@@ -22,9 +22,6 @@ def load_transactions(file):
         # Clean column names (removes extra spaces)
         df.columns = [col.strip() for col in df.columns]
 
-        #Converts 'Amount' to float (remove commas if present)
-        df["Amount"] = df["Amount"].str.replace(",", "").astype(float)
-
         #Convert 'Date' to datetime format
         df["Date"] = pd.to_datetime(df["Date"], format="%d %b %Y") 
 
