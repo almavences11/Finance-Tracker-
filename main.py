@@ -25,7 +25,6 @@ def load_transactions(file):
         #Convert 'Date' to datetime format
         df["Date"] = pd.to_datetime(df["Date"], format="%d %b %Y") 
 
-        #Categorize transactions based on predefined mapping
         
         # Map categories/merchant names to broader groups
         category_map = {
